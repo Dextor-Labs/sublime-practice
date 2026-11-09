@@ -8,5 +8,14 @@
 
 	"settings": {
         "draw_white_space": "all"
-    }
+    },
+
+    "build_systems": [
+        {
+            "name": "Python - Project Run",
+            "cmd": ["python3", "-u", "$file"],
+            "working_dir": "$file_path",
+            "selector": "source.python"
+        }
+    ]
 }
