@@ -4,5 +4,9 @@
 		{
 			"path": "."
 		}
-	]
+	],
+
+	"settings": {
+        "draw_white_space": "all"
+    }
 }
