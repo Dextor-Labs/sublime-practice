@@ -1,4 +1,11 @@
 {
+
+	// ========================================
+    // SUBLIME TEXT 4 - PYTHON PRACTICE PROJECT
+    // ========================================
+
+    // Project folders
+    // "." means the folder containing this project file.
 	"folders":
 	[
 		{
@@ -6,14 +13,56 @@
 		}
 	],
 
+	// ========================================
+    // PROJECT SETTINGS
+    // ========================================
+
 	"settings": {
+		// Show spaces and tabs as visible dots.
+        // "all"       = Always show whitespace.
+        // "selection" = Show within selected text.
+        // "none"      = Hide whitespace markers.
         "draw_white_space": "all"
     },
 
+	// ========================================
+    // CUSTOM PYTHON BUILD SYSTEMS
+    // ========================================
     "build_systems": [
+    	// ------------------------------------
+        // PYTHON - PROJECT RUN
+        // ------------------------------------
+        // Runs the currently opened Python file.
+        // Select in Tools > Build System.
+        // Press Cmd+B on macOS to execute.
+        // Program output appears in the build panel.
         {
             "name": "Python - Project Run",
             "cmd": ["python3", "-u", "$file"],
+            "working_dir": "$file_path",
+            "selector": "source.python"
+        },
+
+         // ------------------------------------
+        // PYTHON - SYNTAX CHECK
+        // ------------------------------------
+        // Checks Python syntax without running
+        // the program's main statements.
+        // Finds syntax errors such as missing
+        // parentheses, quotes or colons.
+        //
+        // Successful check:
+        // [Finished in ...]
+        //
+        // Failed check:
+        // SyntaxError and exit code 1
+        //
+        // May create a __pycache__ folder.
+        // Git ignores it using .gitignore.
+
+        {
+            "name": "Python - Syntax Check",
+            "cmd": ["python3", "-m", "py_compile", "$file"],
             "working_dir": "$file_path",
             "selector": "source.python"
         }
